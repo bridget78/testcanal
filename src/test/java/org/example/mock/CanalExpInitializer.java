@@ -1,5 +1,8 @@
 package org.example.mock;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.model.Subscriber;
 import org.mockserver.mock.Expectation;
 import org.mockserver.server.initialize.ExpectationInitializer;
 
@@ -53,22 +56,39 @@ public class CanalExpInitializer implements ExpectationInitializer {
     }
 */
 
+    private String getStrRandSubscriber() throws JsonProcessingException {
+        Subscriber subscriber = new Subscriber();
+
+        subscriber.setFirstName("Pierre");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String strSubscriber = mapper.writeValueAsString(subscriber);
+        return strSubscriber;
+    }
+
+
     @Override
     public Expectation[] initializeExpectations() {
         // Test Carine
         System.out.println("Test Carine - TestMockServer - initializeExpectations");
 
-        return new Expectation[]{
-                new Expectation(request().withMethod("GET")
-                        .withPath("/getRandSubscriber")
-                        .withHeaders(header("Host", "localhost:1080"),
-                                header("Connection", "Keep-Alive"),
-                                header("User-Agent", "Apache-HttpClient/4.5.12 (Java/11.0.1)"),
-                                header("Accept-Encoding", "gzip,deflate"),
-                                header("content-length", "0"))).thenRespond(
-                        response().withStatusCode(200).withBody("Test Carine - Coucou")
-                )
-        };
+        try {
+            return new Expectation[]{
+                    new Expectation(request().withMethod("GET")
+                            .withPath("/getRandSubscriber")
+                            .withHeaders(header("Host", "localhost:1080"),
+                                    header("Connection", "Keep-Alive"),
+                                    header("User-Agent", "Apache-HttpClient/4.5.12 (Java/11.0.1)"),
+                                    header("Accept-Encoding", "gzip,deflate"),
+                                    header("content-length", "0"))).thenRespond(
+                            response().withStatusCode(200).withBody(getStrRandSubscriber())
+                    )
+            };
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     //...
