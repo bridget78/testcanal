@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.example.acceptancetests.AcceptanceTestSuite
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.369 s - in org.example.acceptancetests.AcceptanceTestSuite

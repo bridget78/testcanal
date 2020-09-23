@@ -1,7 +1,8 @@
 org\example\model\Channel.class
+org\example\mock\CanalExpInitializer.class
+org\example\RunCucumberTest.class
 org\example\model\AddressStatus.class
 org\example\services\SubscriberService.class
 org\example\model\Subscriber.class
-org\example\acceptancetests\AcceptanceTestSuite.class
-org\example\steps\MathsStepDefinitions.class
+org\example\StepDefinitions.class
 org\example\model\Address.class

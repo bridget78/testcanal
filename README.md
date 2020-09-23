@@ -1,5 +1,5 @@
 Commande pour exécuter les tests:
 mvn clean install
 
-Rapport Serenity:
-target/site/serenity/index.html
+Rapport Surefire:
+target/surefire-reports/index.html
