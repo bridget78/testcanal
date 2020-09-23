@@ -4,47 +4,63 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.ParameterType;
-import org.example.model.Adresse;
-import org.example.model.Canal;
+import org.example.model.Address;
+import org.example.model.AddressStatus;
+import org.example.model.Channel;
+import org.example.model.Subscriber;
 import org.example.services.SubscriberService;
+import org.testng.Assert;
 
 
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-
 public class StepDefinitions {
 
+    private Subscriber subscriber;
+
+    int operatorId;
+
     @ParameterType(".*")
-    public Canal canal(String canal) {
-        return new Canal(canal);
+    public Channel canal(String canal) {
+        return new Channel(canal);
     }
+
     @Given("un abonné avec une adresse principale {word} en France")
-    public void abonneAdrPrincipal(String word) throws IOException {
-        SubscriberService.getRandSubscriber();
-
-        Adresse adresse = new Adresse();
-        adresse.setStatut(word);
-
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void subscriberMainAddr(String word) throws IOException {
+        this.subscriber = SubscriberService.getRandSubscriber(word);
     }
 
-    @When("le conseiller connecte a {canal} modifie l'adresse de l'abonne")
-    public void conseillerModifAdr(String canal) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("le conseiller connecté a {word} modifie l'adresse de l'abonné")
+    public void conseillerModifAdr(String word) {
+        this.operatorId = 3;
+        Address oldMainAddr = subscriber.getMainAddress();
+        Address newAddress = new Address();
+        newAddress.setAddrId(oldMainAddr.getAddrId());
+        newAddress.setCity("PARIS");
+        newAddress = SubscriberService.modifAddr(operatorId, newAddress);
     }
 
-    @Then("l'adresse de l'abonne modifiee est enregistree sur l'ensemble des contrats de l'abonne")
-    public void adrModifiee() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné")
+    public void addrModified() {
+        // TODO: Retrieve the new subscriber data
+        Address mainAddr = subscriber.getMainAddress();
+
+        if (mainAddr.getAddressStatus() == AddressStatus.INACTIVE) {
+            Assert.assertEquals(0, 1);
+        } else {
+            Assert.assertEquals(1, 1);
+        }
     }
 
-    @Then("un mouvement de modification d'adresse est cree")
-    public void mouvModifAdrCree() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("un mouvement de modification d'adresse est créé")
+    public void movAddrModifCreated() {
+        // TODO: Retrieve the movement data
+        Address mainAddr = subscriber.getMainAddress();
+
+        if (mainAddr.getAddressStatus() == AddressStatus.INACTIVE) {
+            Assert.assertEquals(0, 1);
+        } else {
+            Assert.assertEquals(1, 1);
+        }
     }
 }

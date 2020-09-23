@@ -1,10 +1,10 @@
 package org.example.model;
 
-public class Canal {
+public class Channel {
     
     private String name;
 
-    public Canal(String name) {
+    public Channel(String name) {
         this.name = name;
     }
 

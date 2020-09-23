@@ -1,87 +1,97 @@
 package org.example.model;
 
-public class Adresse {
+public class Address {
 
-    int adrId;
+    private int addrId;
 
-    int abonneId;
+    private int subscriberId;
 
-    String adr;
+    private String street;
 
-    String complementAdr;
+    private String adrLine2;
 
-    String codePostal;
+    private String zipCode;
 
-    String ville;
+    private String city;
 
-    String pays;
+    private String country;
 
-    String statut;
+    private boolean isMainAddr;
 
-    public Adresse() {
+    private AddressStatus addressStatus;
+
+    public Address() {
     }
 
-    public int getAdrId() {
-        return adrId;
+    public int getAddrId() {
+        return addrId;
     }
 
-    public void setAdrId(int adrId) {
-        this.adrId = adrId;
+    public void setAddrId(int addrId) {
+        this.addrId = addrId;
     }
 
-    public int getAbonneId() {
-        return abonneId;
+    public int getSubscriberId() {
+        return subscriberId;
     }
 
-    public void setAbonneId(int abonneId) {
-        this.abonneId = abonneId;
+    public void setSubscriberId(int subscriberId) {
+        this.subscriberId = subscriberId;
     }
 
-    public String getAdr() {
-        return adr;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAdr(String adr) {
-        this.adr = adr;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getComplementAdr() {
-        return complementAdr;
+    public String getAdrLine2() {
+        return adrLine2;
     }
 
-    public void setComplementAdr(String complementAdr) {
-        this.complementAdr = complementAdr;
+    public void setAdrLine2(String adrLine2) {
+        this.adrLine2 = adrLine2;
     }
 
-    public String getCodePostal() {
-        return codePostal;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setCodePostal(String codePostal) {
-        this.codePostal = codePostal;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public String getVille() {
-        return ville;
+    public String getCity() {
+        return city;
     }
 
-    public void setVille(String ville) {
-        this.ville = ville;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getPays() {
-        return pays;
+    public String getCountry() {
+        return country;
     }
 
-    public void setPays(String pays) {
-        this.pays = pays;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
-    public String getStatut() {
-        return statut;
+    public boolean isMainAddr() {
+        return isMainAddr;
     }
 
-    public void setStatut(String statut) {
-        this.statut = statut;
+    public void setMainAddr(boolean mainAddr) {
+        isMainAddr = mainAddr;
+    }
+
+    public AddressStatus getAddressStatus() {
+        return addressStatus;
+    }
+
+    public void setAddressStatus(AddressStatus addressStatus) {
+        this.addressStatus = addressStatus;
     }
 }
