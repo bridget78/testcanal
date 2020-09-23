@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Modifier l'adresse d'un abonne" skipped="0" tests="2" time="3.77" timestamp="2020-09-23 07:23:29"><testcase name="Modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet"><failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">expected:&lt;0&gt; but was:&lt;1&gt;</failure><system-err>expected:&lt;0&gt; but was:&lt;1&gt;&#13;
+proj.archetype.serenity@1.0-SNAPSHOT/org.example.steps.MathsStepDefinitions.addrModified(MathsStepDefinitions.java:52)&#13;
+✽.l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné(file:///C:/Users/Carine%20Nguyen/IdeaProjects/proj_archetype_serenity/src/test/resources/features/math/adresse.feature:7)&#13;
+</system-err></testcase></testsuite>
