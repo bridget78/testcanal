@@ -4,10 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.ParameterType;
-import org.example.model.Address;
-import org.example.model.AddressStatus;
-import org.example.model.Channel;
-import org.example.model.Subscriber;
+import org.example.model.*;
+import org.example.services.ManagementService;
+import org.example.services.OperatorService;
 import org.example.services.SubscriberService;
 import org.testng.Assert;
 
@@ -32,7 +31,9 @@ public class StepDefinitions {
 
     @When("le conseiller connecté a {word} modifie l'adresse de l'abonné")
     public void conseillerModifAdr(String word) {
-        this.operatorId = 3;
+        Operator operator = OperatorService.buildOperatorFromId(3);
+        OperatorService.login(operator, new Channel(word));
+
         Address oldMainAddr = subscriber.getMainAddress();
         Address newAddress = new Address();
         newAddress.setAddrId(oldMainAddr.getAddrId());
@@ -54,13 +55,10 @@ public class StepDefinitions {
 
     @Then("un mouvement de modification d'adresse est créé")
     public void movAddrModifCreated() {
-        // TODO: Retrieve the movement data
         Address mainAddr = subscriber.getMainAddress();
+        Movement mov = ManagementService.getLastMovement(operatorId, subscriber.getSubscriberId(), (mainAddr.getAddressStatus() == AddressStatus.ACTIVE));
 
-        if (mainAddr.getAddressStatus() == AddressStatus.INACTIVE) {
-            Assert.assertEquals(0, 1);
-        } else {
-            Assert.assertEquals(1, 1);
-        }
+        Assert.assertNotNull(mov);
+        Assert.assertEquals(mov.getMovType(), MovementType.MODIF_ADDR);
     }
 }

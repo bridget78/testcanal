@@ -1,18 +1,18 @@
 package org.example.model;
 
 public class Channel {
-    
-    private String name;
+
+    private ChannelName name;
 
     public Channel(String name) {
-        this.name = name;
+        this.name = ChannelName.getChannelNameFromString(name);
     }
 
-    public String getName() {
+    public ChannelName getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(ChannelName name) {
         this.name = name;
     }
 }

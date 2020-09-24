@@ -2,19 +2,35 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-24T01:25:51 CEST" name="Surefire suite" finished-at="2020-09-24T01:25:58 CEST" duration-ms="6769">
+  <suite started-at="2020-09-24T18:07:54 CEST" name="Surefire suite" finished-at="2020-09-24T18:07:58 CEST" duration-ms="4575">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-09-24T01:25:51 CEST" name="Surefire test" finished-at="2020-09-24T01:25:58 CEST" duration-ms="6769">
+    <test started-at="2020-09-24T18:07:54 CEST" name="Surefire test" finished-at="2020-09-24T18:07:58 CEST" duration-ms="4575">
       <class name="org.example.RunCucumberTest">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T01:25:52 CEST" name="setUpClass" finished-at="2020-09-24T01:25:55 CEST" duration-ms="3955" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T18:07:54 CEST" name="setUpClass" finished-at="2020-09-24T18:07:56 CEST" duration-ms="1996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T01:25:56 CEST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-24T01:25:58 CEST" duration-ms="2564" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T18:07:56 CEST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-24T18:07:58 CEST" duration-ms="2257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Modifier l'address d'un abonne]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T18:07:56 CEST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-24T18:07:58 CEST" duration-ms="2257" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -39,7 +55,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:907)
 at org.testng.Assert.assertEquals(Assert.java:917)
-at org.example.StepDefinitions.addrModified(StepDefinitions.java:49)
+at org.example.StepDefinitions.addrModified(StepDefinitions.java:50)
 at ✽.l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des contrats de l'abonné(classpath:org/example/adresse.feature:7)
 ]]>
             </full-stacktrace>
@@ -47,23 +63,7 @@ at ✽.l'adresse de l'abonné modifiée est enregistrée sur l'ensemble des cont
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T01:25:56 CEST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-24T01:25:58 CEST" duration-ms="2517" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Modification de l'adresse d'un abonné résidant en France sans ou avec date d'effet"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Modifier l'address d'un abonne]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T01:25:58 CEST" name="tearDownClass" finished-at="2020-09-24T01:25:58 CEST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.RunCucumberTest@1cbb87f3]" started-at="2020-09-24T18:07:58 CEST" name="tearDownClass" finished-at="2020-09-24T18:07:58 CEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

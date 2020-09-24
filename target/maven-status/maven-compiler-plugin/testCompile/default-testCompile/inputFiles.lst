@@ -1,8 +1,14 @@
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\mock\CanalExpInitializer.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\Operator.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\ChannelName.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\MovementType.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\services\SubscriberService.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\Movement.java
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\Channel.java
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\RunCucumberTest.java
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\Subscriber.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\services\ManagementService.java
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\StepDefinitions.java
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\Address.java
-C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\services\SubscriberService.java
+C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\services\OperatorService.java
 C:\Users\Carine Nguyen\IdeaProjects\testcanal\src\test\java\org\example\model\AddressStatus.java
